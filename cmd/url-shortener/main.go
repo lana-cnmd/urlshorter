@@ -43,7 +43,7 @@ func main() {
 	router.Post("/url", save.New(log, storage))
 	router.Get("/url/{alias}", redirect.New(log, storage))
 
-	log.Info("starting server", slog.String("address", cfg.Address))
+	log.Info("starting server:", slog.String("address", cfg.Address))
 
 	srv := &http.Server{
 		Addr:         cfg.Address,

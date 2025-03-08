@@ -45,7 +45,7 @@ func New(log *slog.Logger, urlSaver URLSaver) http.HandlerFunc {
 		if err != nil {
 			log.Error("failed to decode request body", sl.Err(err))
 
-			render.JSON(w, r, resp.Error("failed to decode request"))
+			render.JSON(w, r, resp.Error("failed to decode request."))
 
 			return
 		}

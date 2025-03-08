@@ -9,7 +9,7 @@ import (
 func NewRandomString(size int) string {
 	rnd := rand.New(rand.NewSource(uint64(time.Now().UnixNano())))
 
-	chars := []rune("qwertyuiopasdfghjkklzxcvbnm12345677890")
+	chars := []rune("qwertyuiopasdf7ghjkklzxcvbnm12345677890")
 
 	b := make([]rune, size)
 	for i := range b {

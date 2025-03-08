@@ -30,7 +30,7 @@ func New(log *slog.Logger, urlGetter URLGetter) http.HandlerFunc {
 		if alias == "" {
 			log.Error("empty alias")
 
-			render.JSON(w, r, resp.Error("empty alias"))
+			render.JSON(w, r, resp.Error("empty alias."))
 
 			return
 		}
